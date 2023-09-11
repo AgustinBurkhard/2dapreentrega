@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 5px;
+    background: rgb(249,249,249);
+    background: radial-gradient(circle, rgba(249,249,249,1) 45%, rgba(148,187,233,1) 100%);
+}
+header{
+    background-color: skyblue;
+}
+.log-pag{
+    width: 50px;
+}
+main{
+    padding: 10px;
+    margin: 20px auto;
+}
+.bienvenida{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(182, 182, 0);
+}
+.bandera{
+    width: 500px;
+    padding: 50px;
+    margin-left: 30%;
+    border-radius: 10px;
+}
+.footer{
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      "git mail telefono"
+      ". . .";
+    grid-area: footer;
+}
+.mail { grid-area: mail;
+    margin-left: 20%; 
+    text-decoration: none;    
+}
+.mail-a{
+    text-decoration: none;
+    color:grey;
+}
+.mail-a:hover{
+    color: black;
+}
+.git { grid-area: git; 
+    margin-left: 20%;
+    text-decoration: none;
+}
+.git-a{
+    text-decoration: none;
+    color: grey;
+}
+.git-a:hover{
+    color: black;
+}
+.telefono { grid-area: telefono; 
+    margin-left: 20%;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .bandera{
+        width: 500px;
+        padding: 30px;
+        margin-left: 15%;
+        border-radius: 10px;}
+}
+
+@media screen and (max-width:450px) {
+    .bandera{
+        width: 300px;
+        padding: 10px;
+        margin-left: 10%;
+        border-radius: 10px;}
+
+    .footer{
+        margin-top: 70px;
+        background-color: skyblue;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "git"
+          "mail"
+          "telefono";
+        grid-area: footer;
+    }
+}

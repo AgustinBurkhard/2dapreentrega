@@ -1,0 +1,47 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Nav Nav Nav"
+      "main main main"
+      "footer footer footer";
+  }
+  
+  .Nav { grid-area: Nav; }
+  
+  .main {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "bien-venido bien-venido bien-venido"
+      ". imagen ."
+      ". . .";
+    grid-area: main;
+  }
+  
+  .bien-venido { grid-area: bien-venido; }
+  
+  .imagen { grid-area: imagen; }
+  
+  .footer {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      "git mail telefono"
+      ". . .";
+    grid-area: footer;
+  }
+  
+  .mail { grid-area: mail; }
+  
+  .git { grid-area: git; }
+  
+  .telefono { grid-area: telefono; }
+  

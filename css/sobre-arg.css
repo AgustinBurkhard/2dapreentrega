@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 5px;
+    background: rgb(249,249,249);
+    background: radial-gradient(circle, rgba(249,249,249,1) 45%, rgba(148,187,233,1) 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 2.2fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav nav"
+      "seccion seccion seccion"
+      "footer footer footer";
+}
+.nav { grid-area: nav; }
+  
+.footer { grid-area: footer; }
+  
+.seccion { grid-area: seccion; }
+header{
+    background-color: skyblue;
+}
+.log-pag{
+    width: 50px;
+}
+
+.nav{
+    width: 100%;
+}
+.boton{
+    justify-content: end;
+}
+seccion{
+    margin: 20px auto;
+}
+.parrafo{
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button{
+    width: 100px;
+    margin-left: 45%;
+    margin-top: 10px;
+    background-color: rgb(182, 182, 0);
+    border-radius: 20%;
+    border-style: none;
+}
+.a{
+    text-decoration: none;
+    color: black;
+}
+.button:hover{
+    background-color: skyblue;
+}
+.a:hover{
+    color: white;
+}
+.footer{
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      "git mail telefono"
+      ". . .";
+    grid-area: footer;
+}
+.mail { grid-area: mail;
+    margin-left: 20%; 
+    text-decoration: none;    
+}
+.mail-a{
+    text-decoration: none;
+    color:grey;
+}
+.mail-a:hover{
+    color: black;
+}
+.git { grid-area: git; 
+    margin-left: 20%;
+    text-decoration: none;
+}
+.git-a{
+    text-decoration: none;
+    color: grey;
+}
+.git-a:hover{
+    color: black;
+}
+.telefono { grid-area: telefono; 
+    margin-left: 20%;
+    text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+    .bandera{
+        width: 500px;
+        padding: 30px;
+        margin-left: 15%;
+        border-radius: 10px;}
+    header{
+        background-color: skyblue;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .bandera{
+        width: 300px;
+        padding: 10px;
+        margin-left: 10%;
+        border-radius: 10px;}
+    header{
+        background-color: skyblue;
+        height: 70px;}
+    .footer{
+        margin-top: 70px;
+        background-color: skyblue;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "git"
+          "mail"
+          "telefono";
+        grid-area: footer;
+    }
+}
+
+
+
+
+
+  
